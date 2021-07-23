@@ -1,15 +1,11 @@
-{{ config (
-    materialized="table"
-)}}
-
---- modularize by refering to stg_customer model as source
+--- modularize by refering to stg_customer model as source : STAGING MODEL
 with customers as (
 
     select * from {{ ref('stg_customers')}}
 
 ),
 
---- modularize by refering to stg_order models as source
+--- modularize by refering to stg_order models as source : STAGING MODEL
 orders as (
 
     select * from {{ ref('stg_orders') }}
