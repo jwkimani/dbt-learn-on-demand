@@ -2,22 +2,24 @@ Welcome to my dbt project!
 
 ### Using the starter project
 
+- dbt is a tool for how to build with data rather than enforcing what to build
+
 Try running the following commands:
 - dbt run
 - dbt test
 
 ### dbt Learning Notes
 
-#Model naming conventions
+# Model naming conventions
 
-- Sources - the raw dara that has already been loaded to a WH
-- Staging - 1:1 with source tables. Clean and standardized tables(views)
-- Intermediate - models between staging and final models. Always build on staging models
-- Facts - Skinny, long tables of things that are occurring or have occured (events, clicks, votes etc)
-- Dimensions - things that exist, do not change as much for example email for a customer
+- Sources(src) - the raw dara that has already been loaded to a WH
+- Staging(stg) - 1:1 with source tables. Clean and standardized tables(views)
+- Intermediate(int) - models between staging and final models. Always build on staging models
+- Facts(fct) - Skinny, long tables of things that are occurring or have occured (events, clicks, votes etc)
+- Dimensions(dim) - things that exist, do not change as much for example email for a customer
 
 
-# Recommended folder structure (Example)
+# Recommended project structure (Example)
 
 ```
 dbt-learn
@@ -45,6 +47,9 @@ dbt-learn
 └── README.md
 ```
 
+# Ref Macro
+
+- Use  `{{ ref('REPLACE_WITH_YOUR_MODEL_NAME') )}` to refer to other defined models and resume within current one. 
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
