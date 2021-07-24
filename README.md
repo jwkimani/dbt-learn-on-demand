@@ -51,6 +51,12 @@ dbt-learn
 
 - Use  `{{ ref('REPLACE_WITH_YOUR_MODEL_NAME') )}` to refer to other defined models and resume within current one. 
 
+# Documentation in DBT
+
+- DBT provides a DAG which is automatically generated to show flow of data from source to final models
+- You can add own test descriptions  directly in the project. Documenting can happen as you build your models
+
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
