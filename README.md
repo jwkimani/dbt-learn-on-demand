@@ -12,7 +12,7 @@ Try running the following commands:
 
 # Model naming conventions
 
-- Sources(src) - the raw dara that has already been loaded to a WH
+- Sources(src) - the raw data that has already been loaded to a WH
 - Staging(stg) - 1:1 with source tables. Clean and standardized tables(views)
 - Intermediate(int) - models between staging and final models. Always build on staging models
 - Facts(fct) - Skinny, long tables of things that are occurring or have occured (events, clicks, votes etc)
@@ -50,12 +50,6 @@ dbt-learn
 # Ref Macro
 
 - Use  `{{ ref('REPLACE_WITH_YOUR_MODEL_NAME') )}` to refer to other defined models and resume within current one. 
-
-# Documentation in DBT
-
-- DBT provides a DAG which is automatically generated to show flow of data from source to final models
-- You can add own test descriptions  directly in the project. Documenting can happen as you build your models
-
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
