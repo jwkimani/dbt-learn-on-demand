@@ -58,6 +58,11 @@ dbt-learn
 - You can add own test descriptions  directly in the project. Documenting can happen as you build your models. You can use MarkDown
 - To run the document generation in dbt: `dbt docs generate` 
 
+# Packages
+
+- Include package in the .yml
+- Run `dbt deps` to install the package
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
