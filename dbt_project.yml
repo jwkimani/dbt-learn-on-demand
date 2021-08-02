@@ -36,6 +36,8 @@ models:
         marts:
             core:
                 +materialized: table
+            call_center:
+                +materialized: table
         staging:
             +materialized: view
 
