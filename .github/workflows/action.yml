@@ -13,5 +13,5 @@ jobs:
                 image: fishtownanalytics/dbt:1.0.0
                 shell: bash
                 run: |
-                  echo "first line"
-                  echo "second line"
+                  pwd
+                  dbt --version
