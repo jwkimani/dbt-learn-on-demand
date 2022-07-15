@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - uses: addnab/docker-run-action@v3
+    - name: Build the Docker image for dbt
+      with:
+        image: fishtownanalytics/dbt:1.0.0
+        shell: bash
+        run: |
+          echo "first line"
+          echo "second line"
