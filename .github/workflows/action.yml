@@ -20,4 +20,4 @@ jobs:
                   pwd
                   dbt --version
                   pwd
-                  ls /home/runner/work/
+                  ls $GITHUB_WORKSPACE
