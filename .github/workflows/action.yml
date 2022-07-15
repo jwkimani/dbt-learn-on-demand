@@ -1,10 +1,17 @@
-# action.yml
-- name: Checkout 
-  uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
-- uses: addnab/docker-run-action@v3
-  with:
-    image: docker:latest
-    shell: bash
-    run: |
-      echo "first line"
-      echo "second line"
+name: Build dbt environment
+on: [push]
+jobs:
+    compile:
+        name: Compile site assets
+        runs-on: ubuntu-latest
+        steps:
+          - name: Check out the repo
+            uses: actions/checkout@v2
+          - name: Run the build process with Docker
+            uses: addnab/docker-run-action@v3
+            with:
+                image: fishtownanalytics/dbt:1.0.0
+                shell: bash
+                run: |
+                  echo "first line"
+                  echo "second line"
