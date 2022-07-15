@@ -6,12 +6,12 @@ on:
     branches: [ "master" ]
 jobs:
     compile:
-        name: Compile site assets
+        name: Build and Compile dbt Project
         runs-on: ubuntu-latest
         steps:
           - name: Check out the repo
             uses: actions/checkout@v2
-          - name: Run the build process with Docker
+          - name: Use dbt docker image to access dbt project
             uses: addnab/docker-run-action@v3
             with:
                 image: fishtownanalytics/dbt:1.0.0
