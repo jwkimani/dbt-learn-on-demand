@@ -20,4 +20,4 @@ jobs:
                   pwd
                   dbt --version
                   pwd
-                  ls ~
+                  ls /home/runner/work/
