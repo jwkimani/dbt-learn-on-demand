@@ -19,6 +19,7 @@ jobs:
                 shell: bash
                 run: |
                   dbt --version
+                  echo "Below is the dbt target url"
                   echo ${{secrets.DBT_TARGET_URL}}
                   cd /work
                   ls -ltr
