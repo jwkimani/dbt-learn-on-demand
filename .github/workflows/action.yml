@@ -19,8 +19,8 @@ jobs:
                 shell: bash
                 run: |
                   dbt --version
+                  echo ${{secrets.DBT_TARGET_URL}}
                   cd /work
                   ls -ltr
                   dbt debug
                   dbt compile
-                  
