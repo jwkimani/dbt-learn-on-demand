@@ -18,7 +18,9 @@ jobs:
                 options: -v ${{ github.workspace }}:/work -e ABC=123
                 shell: bash
                 run: |
-                  pwd
                   dbt --version
-                  pwd
-                  ls /work
+                  cd /work
+                  ls -ltr
+                  dbt debug
+                  dbt compile
+                  
