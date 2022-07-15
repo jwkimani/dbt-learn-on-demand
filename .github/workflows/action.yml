@@ -1,16 +1,10 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+- name: Checkout 
+  uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
+- uses: addnab/docker-run-action@v3
+  with:
+    image: docker:latest
+    shell: bash
+    run: |
+      echo "first line"
+      echo "second line"
