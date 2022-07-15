@@ -1,5 +1,9 @@
 name: Build dbt environment
-on: [push]
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 jobs:
     compile:
         name: Compile site assets
@@ -15,3 +19,5 @@ jobs:
                 run: |
                   pwd
                   dbt --version
+                  pwd
+                  ls /home/runner/work/dbt-learn-on-demand/dbt-learn-on-demand/
