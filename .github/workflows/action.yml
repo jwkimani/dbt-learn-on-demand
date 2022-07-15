@@ -20,4 +20,4 @@ jobs:
                   pwd
                   dbt --version
                   pwd
-                  ls /home/runner/work/dbt-learn-on-demand/dbt-learn-on-demand/
+                  ls ~
