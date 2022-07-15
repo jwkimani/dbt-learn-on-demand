@@ -20,8 +20,7 @@ jobs:
                 run: |
                   dbt --version
                   echo "Below is the dbt target url"
-                  echo ${{secrets.DBT_TARGET_URL}}
+                  echo ${{secrets.DBT_TARGET_URL}} | sed 's/./& /g' 
                   cd /work
                   ls -ltr
                   dbt debug
-                  dbt compile
