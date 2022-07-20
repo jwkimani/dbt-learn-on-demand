@@ -21,7 +21,7 @@ jobs:
                   dbt --version
                   mkdir ~/.dbt
                   touch /root/.dbt/profiles.yml
-                  'echo -e "${{ secrets.DBT_PROFILE_NAME }}:\n  outputs:\n    dev:\n      type: ${{ secrets.DBT_TARGET_TYPE }}\n      account: ${{ secrets.DBT_TARGET_URL }}\n\n      user: ${{ secrets.DBT_USER }}\n      password: ${{ secrets.DBT_PASSWORD }}\n\n      role: ${{ secrets.DBT_ROLE }}\n      database: ${{ secrets.DBT_DB }}\n      warehouse: ${{ secrets.DBT_WAREHOUSE }}\n      schema: ${{ secrets.DBT_SCHEMA }}\n      threads: ${{ secrets.DBT_NUM_THREADS }}\n      client_session_keep_alive: True\n      query_tag: dbt_ci_pipelines\n  target: dev\n " >> /root/.dbt/profiles.yml' 
+                  echo -e "${{ secrets.DBT_PROFILE_NAME }}:\n  outputs:\n    dev:\n      type: ${{ secrets.DBT_TARGET_TYPE }}\n      account: ${{ secrets.DBT_TARGET_URL }}\n\n      user: ${{ secrets.DBT_USER }}\n      password: ${{ secrets.DBT_PASSWORD }}\n\n      role: ${{ secrets.DBT_ROLE }}\n      database: ${{ secrets.DBT_DB }}\n      warehouse: ${{ secrets.DBT_WAREHOUSE }}\n      schema: ${{ secrets.DBT_SCHEMA }}\n      threads: ${{ secrets.DBT_NUM_THREADS }}\n      client_session_keep_alive: True\n      query_tag: dbt_ci_pipelines\n  target: dev\n " >> /root/.dbt/profiles.yml
                   cat /root/.dbt/profiles.yml
                   cd /work
                   ls -ltr
