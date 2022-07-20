@@ -22,7 +22,7 @@ jobs:
                   mkdir ~/.dbt
                   touch /root/.dbt/profiles.yml
                   'echo -e "${{ secrets.DBT_PROFILE_NAME }}:\n  outputs:\n    dev:\n      type: ${{ secrets.DBT_TARGET_TYPE }}\n      account: ${{ secrets.DBT_TARGET_URL }}\n\n      user: ${{ secrets.DBT_USER }}\n      password: ${{ secrets.DBT_PASSWORD }}\n\n      role: ${{ secrets.DBT_ROLE }}\n      database: ${{ secrets.DBT_DB }}\n      warehouse: ${{ secrets.DBT_WAREHOUSE }}\n      schema: ${{ secrets.DBT_SCHEMA }}\n      threads: ${{ secrets.DBT_NUM_THREADS }}\n      client_session_keep_alive: True\n      query_tag: dbt_ci_pipelines\n  target: dev\n " >> /root/.dbt/profiles.yml'
-                  echo -e "rehydrate:\n  outputs:\n    dev:\n      account: xoa86772.us-east-1\n      client_session_keep_alive: true\n      database: DEV_RAW\n      password: A1a-zOKD7V0ERbDVR4hu\n      query_tag: dbt\n      role: analytics_engineer\n      schema: DBT_JWKIMANI\n      threads: 200\n      type: snowflake\n      user: v_root_bose_jam_5qqrx35fALDFl7oXQl66_1658347421\n      warehouse: DBT_WH\n  target: dev\n " >> /root/.dbt/profiles.yml`
+                  echo -e "rehydrate:\n  outputs:\n    dev:\n      account: xoa86772.us-east-1\n      client_session_keep_alive: true\n      database: DEV_RAW\n      password: A1a-zOKD7V0ERbDVR4hu\n      query_tag: dbt\n      role: analytics_engineer\n      schema: DBT_JWKIMANI\n      threads: 200\n      type: snowflake\n      user: v_root_bose_jam_5qqrx35fALDFl7oXQl66_1658347421\n      warehouse: DBT_WH\n  target: dev\n " >> /root/.dbt/profiles.yml
                   cat /root/.dbt/profiles.yml
                   cd /work
                   ls -ltr
