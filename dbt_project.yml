@@ -36,5 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   airbyte_with_redshift:
-        staging:
+        raw_staging:
+          +enabled: true
+        raw_vault:
+          +enabled: false
 

@@ -1,5 +1,6 @@
 {{
     config(
+        enabled=false
         materialized="table",
         tags=["airbyte", "flatten", "covid"],
         schema="williams_dev",
