@@ -8,6 +8,10 @@ sources:
       - name: _airbyte_raw_covid_epidemiology
   - name: juvare
     schema: dbo
-    database: "{{ var('env') }}"
+    database: wedb_9
     tables:
+      - name: boards
+      - name: tables
       - name: table_1
+      - name: incidents
+      - name: shelters
