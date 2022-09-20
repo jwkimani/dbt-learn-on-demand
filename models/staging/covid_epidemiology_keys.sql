@@ -1,0 +1,19 @@
+{{
+    config(
+        materialized="table",
+        tags=["airbyte", "flatten", "stage"],
+        schema="williams_dev",
+        alias="epidemiology_keys",
+    )
+}}
+
+with flatten_airbyte_data as (
+    select json_extract_path_text(json_serialize(_airbyte_data), 'key') from williams_dev._airbyte_raw_covid_epidemiology
+)
+
+with final_cte as (
+    select * from flatten_airbyte_data
+    )
+select *
+from final_cte
+
