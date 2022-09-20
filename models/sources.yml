@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: covid
+    schema: williams_dev
+    database: "{{ var('env') }}"
+    tables:
+      - name: _airbyte_raw_covid_epidemiology
