@@ -2,8 +2,8 @@
     config(
         materialized="table",
         tags=["airbyte", "flatten", "stage"],
-        schema="williams_dev",
-        alias="epidemiology_keys",
+        -- schema="williams_dev",
+        -- alias="epidemiology_keys",
     )
 }}
 
