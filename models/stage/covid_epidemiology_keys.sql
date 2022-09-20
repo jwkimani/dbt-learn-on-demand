@@ -1,7 +1,7 @@
 {{
     config(
         materialized="table",
-        tags=["airbyte", "flatten", "stage"],
+        tags=["airbyte", "flatten", "covid"],
         schema="williams_dev",
         alias="epidemiology_keys",
     )

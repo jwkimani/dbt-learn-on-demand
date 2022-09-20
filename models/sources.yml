@@ -6,3 +6,8 @@ sources:
     database: "{{ var('env') }}"
     tables:
       - name: _airbyte_raw_covid_epidemiology
+  - name: juvare
+    schema: dbo
+    database: "{{ var('env') }}"
+    tables:
+      - name: table_1
