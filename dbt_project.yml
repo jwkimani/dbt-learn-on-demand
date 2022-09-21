@@ -52,7 +52,7 @@ models:
             - 'raw_vault'
           materialized: incremental
           hubs:
-            +enabled: false
+            +enabled: true
             tags:
               - 'hub'
           links:
@@ -60,7 +60,7 @@ models:
             tags:
               - 'link'
           sats:
-            +enabled: false
+            +enabled: true
             tags:
               - 'satellite'
           t_links:

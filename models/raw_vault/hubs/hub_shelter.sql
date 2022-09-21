@@ -1,12 +1,13 @@
 {{
     config(
         materialized="view",
-        tags=["datavault", "dv", "juvare", "demo", "shelter_stg"],
+        tags=["datavault", "dv", "juvare", "demo", "shelter"],
+        schema="dbo",
     )
 }}
-{%- set source_model = "vw_stg_wedb9_table_1" -%}
+{%- set source_model = "stage_vw_wedb9_shelter" -%}
 {%- set src_pk = "shelter_bkey" -%}
-{%- set src_nk = "dataid" -%}
+{%- set src_nk = "SHELTER_HKEY" -%}
 {%- set src_ldts = "_airbyte_emitted_at" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
 
