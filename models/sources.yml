@@ -8,7 +8,7 @@ sources:
       - name: _airbyte_raw_covid_epidemiology
   - name: juvare
     schema: dbo
-    database: wedb_9
+    database: dev
     tables:
       - name: boards
       - name: tables

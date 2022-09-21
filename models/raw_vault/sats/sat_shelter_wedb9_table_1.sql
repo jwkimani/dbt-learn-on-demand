@@ -1,5 +1,5 @@
-{%- set source_model = "v_stg_c11_customer" -%}
-{%- set src_pk = "CUSTOMER_HK" -%}
+{%- set source_model = "vw_stg_wedb9_table_1" -%}
+{%- set src_pk = "shelter_bkey" -%}
 {%- set src_hashdiff = "CUSTOMER_HASHDIFF" -%}
 {% set columns_query %}
 select column_name from edw.information_schema.columns where LOWER(table_name) = '{{source_model}}' and table_catalog = 'EDW' and LOWER(table_schema) = '{{schema}}'

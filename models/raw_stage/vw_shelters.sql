@@ -10,7 +10,7 @@
 
 with source_cte as (
     select * from (
-        select case when prevdataid = 0 then dataid else prevdataid end shelter_bkey, a.* from {{ source('juvare','shelters')  } a}
+        select case when prevdataid = 0 then dataid else prevdataid end shelter_bkey, a.* from {{ source('juvare','shelters') }} a
         )
 ),
 final_cte as (

@@ -11,6 +11,8 @@ profile: 'airbyte'
 
 vars:
   env: 'dev' ## Variable used to define the Environment
+  load_date: '2022-09-21'
+  src-cd: WEDB9
   
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -26,7 +28,6 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
-
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
