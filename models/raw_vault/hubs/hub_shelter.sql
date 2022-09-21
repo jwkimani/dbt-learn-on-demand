@@ -1,6 +1,6 @@
 {{
     config(
-        materialized="view",
+        materialized="table",
         tags=["datavault", "dv", "juvare", "demo", "shelter"],
         schema="dbo",
     )
