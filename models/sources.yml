@@ -10,9 +10,29 @@ sources:
     schema: dbo
     database: dev
     tables:
+      - name: table_1
+        description: >
+          Table_1 is a clone of Shelters table used for demo purposes
+        columns:
+          - name: dataid
+            description: Primary key of the shelters table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+            tests:
+              - not_null
+              - accepted_values:
+                    values: ['Full', 'Open', 'Closed']
+          - name: warming_center
+            description: Is this center a warming center
+            tests:
+              - not_null
+              - accepted_values:
+                    values: ['Yes', 'No']
+
+      - name: incidents
+      - name: table_rob
       - name: boards
       - name: tables
-      - name: table_1
-      - name: incidents
-      - name: shelters
-      - name: table_rob

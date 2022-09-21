@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stage_vw_wedb9_shelter
+    description: Staged customer data from our jaffle shop app.
+    columns: 
+      - name: dataid
+        description: The primary key for shelters table from source.
+        tests:
+          - unique
+          - not_null
+      - name: status
+        description: Shelter status.
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['Full', 'Open', 'Closed']
+      - name: warming_center
+        description: Is this center a warming center
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['Yes', 'No']
