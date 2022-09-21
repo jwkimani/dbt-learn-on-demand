@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized="view",
+        tags=["datavault", "dv", "juvare", "demo", "shelter_stg"],
+    )
+}}
 {%- set source_model = "vw_stg_wedb9_table_1" -%}
 {%- set src_pk = "shelter_bkey" -%}
 {%- set src_nk = "dataid" -%}

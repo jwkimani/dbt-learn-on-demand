@@ -1,7 +1,7 @@
 {{
     config(
         materialized="view",
-        tags=["datavault", "dv", "juvare", "demo", "shelter_stg"],
+        tags=["datavault", "dv", "juvare", "demo", "shelter"],
         schema="dbo",
         alias="dbt_table_1",
     )

@@ -43,6 +43,8 @@
 {%- else -%}
     {%- set all_null = [] -%}
 
+-- CAST('||' as VARCHAR)
+--MD5(CONCAT('||',
     {%- if is_hashdiff -%}
         {{- "CAST({}(CONCAT('{}',".format(hash_alg, concat_string) | indent(4) -}}
     {%- else -%}
