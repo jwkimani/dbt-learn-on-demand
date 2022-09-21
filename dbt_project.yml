@@ -20,7 +20,11 @@ vars:
 model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
+<<<<<<< HEAD
 seed-paths: ["seeds"]
+=======
+seed-paths: ["data"]
+>>>>>>> b26b32825fd45e51a1a0483f04f22bbeeeca3426
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
